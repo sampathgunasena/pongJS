@@ -85,17 +85,22 @@ const ball = {
 
 
 
+let i = 1;
+open = setInterval(init, 800);
+
 
 
 //rendering the game
 function render() {
+
     drawRect(0, 0, 600, 400, "black");
     drawRect(user.x, user.y, user.width,  user.height, user.color);
     drawRect(com.x, com.y, com.width,  com.height, com.color);
     drawNet();
     drawText(user.score, canvas.width / 4, canvas.height / 5, "white");
-    drawText(user.score, 3 * canvas.width / 4, canvas.height / 5, "white");
+    drawText(com.score, 3 * canvas.width / 4, canvas.height / 5, "white");
     drawCircle(ball.x, ball.y, ball.radius, ball.color);
+    
     
 }
 
@@ -106,8 +111,12 @@ function game() {
  
 }
 
-const fps = 30;
-//setInterval(game, 1000 / fps);
+const fps = 50;
+function setRender() {
+    setInterval(game, 1000 / fps);
+}
+
+setTimeout(setRender, 3300);
 
 
 
@@ -186,5 +195,15 @@ function resetBall() {
 }
 
 
-
+function init() {
+    drawRect(0, 0, 600, 400, "black");
+    drawRect(user.x, user.y, user.width,  user.height, user.color);
+    drawRect(com.x, com.y, com.width,  com.height, com.color);
+    drawText(`Get ready . . . ${i}`, 180, 200, "white");
+    i++
+    if (i > 3) {
+        clearInterval(open);
+    }
+    
+}
 

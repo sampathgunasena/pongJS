@@ -1,0 +1,24 @@
+body {
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+#pong {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    margin-left: -300px;
+}
+
+.text {
+    position: relative;
+    font-family: fantasy;
+    font-size: 9em;
+    top: 0px;
+    left: 50%;
+    margin-left: -300px;
+    margin-bottom: 0px;
+
+}
