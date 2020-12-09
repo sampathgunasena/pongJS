@@ -106,7 +106,7 @@ function game() {
  
 }
 
-const fps = 5;
+const fps = 30;
 //setInterval(game, 1000 / fps);
 
 
@@ -149,8 +149,8 @@ function update() {
     } */
 
     //simple AI to control com paddle
-    let comLevel = 1;
-    com.y = (ball.y - (com.y + com.height / 2)) * comLevel;
+    let comLevel = 0.1;
+    com.y += (ball.y - (com.y + com.height / 2)) * comLevel;
 
     let player = (ball.x < canvas.width / 2) ? user : com;
     if(collision(ball, player)) {
