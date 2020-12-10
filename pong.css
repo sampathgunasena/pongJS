@@ -1,6 +1,12 @@
 body {
-    margin: 0px;
-    background-color: rgb(255, 255, 255);
+    /* margin: 0px;
+    background-color: rgb(235, 199, 80); */
+
+    background-color: rgb(235, 199, 80);
+    opacity: 1;
+    background-image: radial-gradient(rgb(7, 7, 7) 1px,rgb(235, 199, 80) 1px);
+    background-size: 20px 20px;
+    z-index: -1;
 
 }
 
@@ -10,6 +16,7 @@ body {
     top: 0px;
     left: 50%;
     margin-left: -300px;
+    z-index: 1;
 }
 
 .text {
@@ -22,3 +29,4 @@ body {
     margin-bottom: 0px;
 
 }
+
